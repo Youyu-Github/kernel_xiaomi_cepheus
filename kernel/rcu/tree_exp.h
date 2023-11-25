@@ -556,8 +556,8 @@ static void rcu_exp_wait_wake(unsigned long s)
 	struct rcu_node *rnp;
 
 	synchronize_sched_expedited_wait();
-	rcu_exp_gp_seq_end(rsp);
-	trace_rcu_exp_grace_period(rsp->name, s, TPS("end"));
+	rcu_exp_gp_seq_end();
+	trace_rcu_exp_grace_period(name, s, TPS("end"));
 
 	/*
 	 * Switch over to wakeup mode, allowing the next GP, but -only- the
