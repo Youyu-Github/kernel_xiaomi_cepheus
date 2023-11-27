@@ -2542,7 +2542,6 @@ next_page:
 
 	if (pages && is_readahead && !drop_ra)
 		WRITE_ONCE(F2FS_I(inode)->ra_offset, -1);
->>>>>>> b13285aeee5d3e6ea997afef42b19e2d31f70925
 	return pages ? 0 : ret;
 }
 
